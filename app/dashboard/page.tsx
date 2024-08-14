@@ -2,7 +2,6 @@ import { nanoid } from '@/lib/utils'
 import { Chat } from '@/components/chat'
 import { AI } from '@/lib/chat/actions'
 import { getMissingKeys } from '@/app/actions'
-import { useUser } from '@auth0/nextjs-auth0/client'
 
 export const metadata = {
   title: 'Next.js AI Chatbot'

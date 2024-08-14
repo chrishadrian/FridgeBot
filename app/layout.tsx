@@ -41,28 +41,28 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<UserProvider>
-				<body
-					className={cn(
-						'font-sans antialiased',
-						GeistSans.variable,
-						GeistMono.variable
-					)}
+			<body
+				className={cn(
+					'font-sans antialiased',
+					GeistSans.variable,
+					GeistMono.variable
+				)}
+			>
+				<Toaster position="top-center" />
+				<Providers
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
 				>
-					<Toaster position="top-center" />
-					<Providers
-						attribute="class"
-						defaultTheme="system"
-						enableSystem
-						disableTransitionOnChange
-					>
+					<UserProvider>
 						<main>
 							{children}
 						</main>
-						<TailwindIndicator />
-					</Providers>
-				</body>
-			</UserProvider>
+					</UserProvider>
+					<TailwindIndicator />
+				</Providers>
+			</body>
 		</html>
 	)
 }

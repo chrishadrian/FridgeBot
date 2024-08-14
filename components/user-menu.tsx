@@ -8,7 +8,6 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { signOut } from '@/auth'
 import Link from 'next/link'
 
 export interface UserMenuProps {

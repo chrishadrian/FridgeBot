@@ -37,6 +37,20 @@ export function PromptForm({
     }
   }, [])
 
+	const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true); // Ensures the component only renders on the client
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  // Render the component only on the client
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <form
       ref={formRef}
@@ -67,22 +81,6 @@ export function PromptForm({
       }}
     >
       <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="absolute left-0 top-[14px] size-8 rounded-full bg-background p-0 sm:left-4"
-              onClick={() => {
-                router.push('/new')
-              }}
-            >
-              <IconPlus />
-              <span className="sr-only">New Chat</span>
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent>New Chat</TooltipContent>
-        </Tooltip>
         <Textarea
           ref={inputRef}
           tabIndex={0}

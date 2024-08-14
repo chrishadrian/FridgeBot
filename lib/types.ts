@@ -23,10 +23,24 @@ export type ServerActionResult<Result> = Promise<
 
 export interface Session {
   user: {
-    id: string
-    email: string
-  }
+    given_name: string;
+    family_name: string;
+    nickname: string;
+    name: string;
+    picture: string;
+    updated_at: string;
+    email: string;
+    email_verified: boolean;
+    sub: string;
+    sid: string;
+  };
+  accessToken: string;
+  accessTokenScope: string;
+  accessTokenExpiresAt: number;
+  idToken: string;
+  token_type: string;
 }
+
 
 export interface AuthResult {
   type: string

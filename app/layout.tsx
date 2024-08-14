@@ -14,7 +14,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client';
 export const metadata = {
 	metadataBase: process.env.VERCEL_URL
 		? new URL(`https://${process.env.VERCEL_URL}`)
-		: undefined,
+		: new URL('http://localhost:3000'),
 	title: {
 		default: 'Next.js AI Chatbot',
 		template: `%s - Next.js AI Chatbot`

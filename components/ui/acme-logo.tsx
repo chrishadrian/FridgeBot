@@ -1,13 +1,13 @@
-import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/components/ui/fonts';
+import { ArrowRightEndOnRectangleIcon, CalculatorIcon } from '@heroicons/react/24/outline';
 
 export default function AcmeLogo() {
   return (
     <div
       className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
     >
-      <GlobeAltIcon className="size-12 rotate-[15deg]" />
-      <p className="text-[44px]">Acme</p>
+      <CalculatorIcon className="size-12 rotate-[15deg]" />
+      <p className="text-[44px]">FridgeBot</p>
     </div>
   );
 }

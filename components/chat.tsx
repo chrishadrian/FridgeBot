@@ -1,5 +1,4 @@
-`use client`
-
+'use client'
 import { useEffect, useState } from 'react'
 import { useUIState, useAIState } from 'ai/rsc'
 import { Message, Session } from '@/lib/types'
@@ -12,8 +11,6 @@ import { EmptyScreen } from './empty-screen'
 import { cn } from '@/lib/utils'
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
-  id?: string
-  session?: Session
   missingKeys: string[]
 }
 

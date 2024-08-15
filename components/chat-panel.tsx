@@ -20,7 +20,6 @@ export interface ChatPanelProps {
 }
 
 export function ChatPanel({
-  id,
   title,
   input,
   setInput,
@@ -74,7 +73,7 @@ export function ChatPanel({
                   setMessages(currentMessages => [
                     ...currentMessages,
                     {
-                      id: nanoid(),
+                      id: 'single-chat',
                       display: <UserMessage>{example.message}</UserMessage>
                     }
                   ])

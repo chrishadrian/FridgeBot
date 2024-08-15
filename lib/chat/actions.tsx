@@ -33,7 +33,7 @@ import {
 } from '@/lib/utils'
 import { saveChat } from '@/app/actions'
 import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
-import { Chat, Message } from '@/lib/types'
+import { Chat, Message, Session } from '@/lib/types'
 import { getSession } from '@auth0/nextjs-auth0'
 
 async function confirmPurchase(symbol: string, price: number, amount: number) {
@@ -520,13 +520,13 @@ export const AI = createAI<AIState, UIState>({
   onSetAIState: async ({ state }) => {
     'use server'
 
-    const session = await getSession()
+    const session = await getSession() as Session
 
     if (session && session.user) {
       const { chatId, messages } = state
 
       const createdAt = new Date()
-      const userId = session.user.id as string
+      const userId = session.user.sid as string
       const path = `/chat/${chatId}`
 
       const firstMessageContent = messages[0].content as string

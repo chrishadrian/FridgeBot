@@ -8,13 +8,13 @@ import { EventsSkeleton } from './events-skeleton'
 export { spinner } from './spinner'
 export { BotCard, BotMessage, SystemMessage } from './message'
 
-const Stock = dynamic(() => import('./stock').then(mod => mod.Stock), {
+const Recipe = dynamic(() => import('./recipe').then(mod => mod.Recipe), {
   ssr: false,
   loading: () => <StockSkeleton />
 })
 
-const Purchase = dynamic(
-  () => import('./stock-purchase').then(mod => mod.Purchase),
+const RecipeSuggestion = dynamic(
+  () => import('./recipe-suggestion').then(mod => mod.RecipeSuggestion),
   {
     ssr: false,
     loading: () => (
@@ -23,7 +23,7 @@ const Purchase = dynamic(
   }
 )
 
-const Stocks = dynamic(() => import('./stocks').then(mod => mod.Stocks), {
+const Recipes = dynamic(() => import('./recipes').then(mod => mod.Recipe), {
   ssr: false,
   loading: () => <StocksSkeleton />
 })
@@ -33,4 +33,4 @@ const Events = dynamic(() => import('./events').then(mod => mod.Events), {
   loading: () => <EventsSkeleton />
 })
 
-export { Stock, Purchase, Stocks, Events }
+export { Recipe as Stock, RecipeSuggestion as Purchase, Recipes as Stocks, Events }

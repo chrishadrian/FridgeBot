@@ -100,6 +100,8 @@ async function submitUserMessage(content: string) {
     Messages inside [] indicate UI elements or user events. For example:
     - "[Suggested recipe]" indicates that a recipe suggestion UI is shown to the user.
     - "[User added ingredients]" indicates that the user has added ingredients to their list.
+
+		If the user requests any recipe suggestion, call \`suggest_recipe\` to show the recipe suggestion UI.
     
     Besides that, you can also chat with users and provide useful kitchen tips or respond to specific ingredient-related queries.`,
     messages: [

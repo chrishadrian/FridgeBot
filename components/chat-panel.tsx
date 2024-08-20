@@ -32,24 +32,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      heading: 'List all',
+      subheading: 'of the vegetables that I have',
+      message: `List all of the vegetables that I have`
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      heading: 'Create a quick, easy meal',
+      subheading: 'with my ingredients',
+      message: 'Create a quick, easy meal with my ingredients'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      heading: 'Suggest recipes',
+      subheading: 'to use up leftovers',
+      message: `Suggest recipes to use up leftovers`
     },
     {
-      heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      heading: 'Plan my meals',
+      subheading: `for the week`,
+      message: `Plan my meals for the week`
     }
   ]
 

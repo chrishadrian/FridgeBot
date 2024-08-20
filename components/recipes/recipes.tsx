@@ -4,13 +4,13 @@ import { useActions, useUIState } from 'ai/rsc'
 
 import type { AI } from '@/lib/chat/actions'
 
-interface Stock {
+interface Recipe {
   symbol: string
   price: number
   delta: number
 }
 
-export function Stocks({ props: stocks }: { props: Stock[] }) {
+export function Recipe({ props: stocks }: { props: Recipe[] }) {
   const [, setMessages] = useUIState<typeof AI>()
   const { submitUserMessage } = useActions()
 

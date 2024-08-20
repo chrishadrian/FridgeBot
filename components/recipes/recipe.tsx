@@ -6,13 +6,13 @@ import { subMonths, format } from 'date-fns'
 import { useResizeObserver } from 'usehooks-ts'
 import { useAIState } from 'ai/rsc'
 
-interface Stock {
+interface Recipe {
   symbol: string
   price: number
   delta: number
 }
 
-export function Stock({ props: { symbol, price, delta } }: { props: Stock }) {
+export function Recipe({ props: { symbol, price, delta } }: { props: Recipe }) {
   const [aiState, setAIState] = useAIState()
   const id = useId()
 

@@ -27,12 +27,9 @@ export function Chat({ className, missingKeys }: ChatProps) {
     })
   }, [missingKeys])
 
-  const clearChat = () => {
-    setMessages([]) // Clear the chat messages
-  }
 
   return (
-    <div className="group w-full overflow-auto pl-0" ref={scrollRef}>
+    <div className="flex flex-col h-screen justify-between pb-10" ref={scrollRef}>
       <div className={cn('pb-[200px] pt-4 md:pt-10', className)} ref={messagesRef}>
         {messages.length ? (
           <ChatList messages={messages} />
@@ -47,7 +44,6 @@ export function Chat({ className, missingKeys }: ChatProps) {
         isAtBottom={isAtBottom}
         scrollToBottom={scrollToBottom}
       />
-      <Button onClick={clearChat}>Clear Chat</Button>
     </div>
   )
 }

@@ -32,17 +32,17 @@ export function DefaultSidebar() {
           text="Dashboard"
         />
         <SidebarItem
-          href="/chat"
+          href="/dashboard/chat"
           icon={ChatBubbleBottomCenterTextIcon}
           text="FridgeChat"
         />
         <SidebarItem
-          href="/inventory"
+          href="/dashboard/inventory"
           icon={ShoppingBagIcon}
           text="Inventory"
         />
         <SidebarItem
-          href="/inbox"
+          href="/dashboard/inbox"
           icon={InboxIcon}
           text="Inbox"
           suffix={<Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />}

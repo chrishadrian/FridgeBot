@@ -14,7 +14,7 @@ export default function RootPage() {
 
 	useEffect(() => {
 		if (!isLoading && user) {
-			redirect('/chat');
+			redirect('/dashboard/chat');
 		}
 	}, [user, isLoading]);
 

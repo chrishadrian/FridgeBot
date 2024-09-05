@@ -1,18 +1,23 @@
 import { Header } from '@/components/header'
+import { DefaultSidebar } from '@/components/sidebar';
 
-interface ChatLayoutProps {
-	children: React.ReactNode
+
+interface DashboardLayoutProps {
+  children: React.ReactNode
 }
 
-export default async function ChatLayout({ children }: ChatLayoutProps) {
-	return (
-		<div className="flex flex-col min-h-screen">
-			<Header />
-			<main className="flex flex-col flex-1 bg-muted/50">
-				<div className="relative flex h-[calc(100vh_-_theme(spacing.16))] overflow-hidden">
-					{children}
-				</div>
-			</main>
-		</div>
-	)
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  return (
+    <div className="flex min-h-screen">
+			<DefaultSidebar />
+      <div className={`flex-1 transition-all duration-100`}>
+        <Header />
+        <main className="flex flex-col flex-1 bg-muted/50">
+          <div className="relative flex flex-col h-[calc(100vh_-_theme(spacing.16))] overflow-hidden">
+            {children}
+          </div>
+        </main>
+      </div>
+    </div>
+  );
 }

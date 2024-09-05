@@ -1,12 +1,12 @@
 import { ListItemPrefix, ListItemSuffix, Typography } from '@material-tailwind/react'
 import Link from 'next/link';
 import React from 'react'
-import { ReactNode, ForwardRefExoticComponent, SVGProps } from "react";
+import { ReactNode } from "react";
 
 
 interface SidebarItemProps {
   href: string;
-  icon: ForwardRefExoticComponent<SVGProps<SVGSVGElement>>;
+  icon: any;
   text: string;
   suffix?: ReactNode;
 }
